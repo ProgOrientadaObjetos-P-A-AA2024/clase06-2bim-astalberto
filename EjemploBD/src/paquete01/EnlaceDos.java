@@ -70,6 +70,11 @@ public class EnlaceDos {
             
             ResultSet rs = statement.executeQuery(data);
             while(rs.next()){
+                // En esta parte del codigo se colecta todos los datos de la tabla
+                // y con rs.next() recorre siempre y cuando exista un valor
+                // con rs.getString lo que hacemos es que busque el valor
+                // que tiene la seccion de nombre y la retorna y realiza el mismo
+                // proceso con el getInt poblacion
                 Ciudad miCiudad = new Ciudad(rs.getString("nombre"),
                 rs.getInt("poblacion"));
                 lista.add(miCiudad);
